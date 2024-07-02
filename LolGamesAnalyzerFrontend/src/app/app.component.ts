@@ -5,6 +5,8 @@ import { Observable } from 'rxjs';
 import { ParticipantFrameDTO } from './DTO/ParticipantFrameDTO';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 @Component({
   selector: 'app-root',
@@ -12,7 +14,9 @@ import { CommonModule } from '@angular/common';
   imports: [
     RouterOutlet,
     HttpClientModule,
-    CommonModule
+    CommonModule,
+    HeaderComponent,
+    FooterComponent
   ],
   providers: [ApiService],
   templateUrl: './app.component.html',

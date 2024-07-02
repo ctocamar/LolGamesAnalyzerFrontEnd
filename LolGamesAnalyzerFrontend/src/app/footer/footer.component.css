@@ -1,0 +1,54 @@
+/* footer.component.css */
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #34495e;
+    color: #ecf0f1;
+    padding: 10px; /* Aumenta el padding para dar más espacio */
+    min-height: 40px; /* Asegura una altura mínima */
+  }
+  
+  .footer-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .footer-right {
+    display: flex;
+    align-items: center; /* Asegura que los iconos estén centrados verticalmente */
+  }
+  
+  .footer-link {
+    color: #fff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .footer-link:hover {
+    opacity: 0.8;
+  }
+  
+  .social-icon {
+    font-size: 24px;
+    color: #fff;
+    margin-left: 20px; /* Aumenta el margen para separar los iconos */
+    text-decoration: none;
+  }
+  
+  .social-icon:hover {
+    opacity: 0.8;
+  }
+
+  .social-icon.twitter:hover {
+    color: #1DA1F2; /* Color característico de Twitter */
+  }
+  
+  .social-icon.paypal:hover {
+    color: #00457C; /* Color característico de PayPal */
+  }
+  
+  .social-icon.discord:hover {
+    color: #7289DA; /* Color característico de Discord */
+  }
