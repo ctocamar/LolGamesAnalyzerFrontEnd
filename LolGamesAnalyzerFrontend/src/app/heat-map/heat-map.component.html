@@ -1,0 +1,32 @@
+<div *ngIf="isLoading; else content">
+    <p>Loading data...</p>
+  </div>
+  
+  <ng-template #content>
+    <div *ngIf="errorMessage; else dataContent">
+      <p>{{ errorMessage }}</p>
+    </div>
+  </ng-template>
+  <ng-template #dataContent>
+    <h1>{{ title }}</h1>
+    <div>
+      <h2>Game Information</h2>
+      <div *ngFor="let data of gameData; let i = index">
+        <h3>Frame {{ i + 1 }}</h3>
+        <p>Current Gold: {{ data.currentGold }}</p>
+        <p>Gold Per Second: {{ data.goldPerSecond }}</p>
+        <p>Jungle Minions Killed: {{ data.jungleMinionsKilled }}</p>
+        <p>Level: {{ data.level }}</p>
+        <p>Minions Killed: {{ data.minionsKilled }}</p>
+        <p>X position: {{ data.position?.x }}</p>
+        <p>Y position: {{ data.position?.y }}</p>
+        <!-- Agrega más propiedades según sea necesario -->
+      </div>
+    </div>
+    
+  </ng-template>
+  
+  <ng-template #loading>
+    <p>Loading data...</p>
+  </ng-template>
+

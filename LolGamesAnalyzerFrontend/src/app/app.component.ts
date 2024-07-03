@@ -7,35 +7,28 @@ import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
+import { AppRoutingModule } from './app-routing.module';
+import { HeatMapComponent } from './heat-map/heat-map.component';
+import { appConfig } from './app.config';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
     HttpClientModule,
     CommonModule,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    RouterOutlet,
+    HeatMapComponent,
   ],
-  providers: [ApiService],
+  providers: [
+    ApiService
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'PABLOPEDROLO THE GOAT';
-  isLoading = true;
-  gameData : Array<ParticipantFrameDTO> = [];
-  errorMessage = '';
-  constructor(private service: ApiService){ }
+  title = '';
 
-  ngOnInit() {
-    this.service.getData().subscribe(
-      res => {
-        console.log('Received data:', res);
-        this.gameData = res;
-        console.log('GameData:', this.gameData);
-        this.isLoading = false;
-      });
-    }
 }
