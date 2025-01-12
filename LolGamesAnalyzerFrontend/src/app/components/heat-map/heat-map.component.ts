@@ -11,16 +11,15 @@ import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
 
 @Component({
-  selector: 'app-heat-map',
-  standalone: true,
-  imports: [
-    CommonModule,
-    HeaderComponent,
-    FooterComponent
-  ],
-  providers: [ApiService],
-  templateUrl: './heat-map.component.html',
-  styleUrl: './heat-map.component.css'
+    selector: 'app-heat-map',
+    imports: [
+        CommonModule,
+        HeaderComponent,
+        FooterComponent
+    ],
+    providers: [ApiService],
+    templateUrl: './heat-map.component.html',
+    styleUrl: './heat-map.component.css'
 })
 export class HeatMapComponent implements OnInit {
   title = 'PABLOPEDROLO THE GOAT';

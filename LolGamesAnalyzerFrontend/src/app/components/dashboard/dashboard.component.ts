@@ -15,11 +15,10 @@ interface ElementStat {
 }
 
 @Component({
-  standalone: true,
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.scss'],
-  imports: [CommonModule, FormsModule, HistogramComponent],
+    selector: 'app-dashboard',
+    templateUrl: './dashboard.component.html',
+    styleUrls: ['./dashboard.component.scss'],
+    imports: [CommonModule, FormsModule, HistogramComponent]
 })
 export class DashboardComponent {
   playerObjects: PlayerDTO[] = []; // Para guardar los datos completos de los jugadores

@@ -1,54 +1,62 @@
 /* footer.component.css */
 .footer {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #34495e;
-    color: #ecf0f1;
-    padding: 10px; /* Aumenta el padding para dar más espacio */
-    min-height: 40px; /* Asegura una altura mínima */
-  }
-  
-  .footer-left {
-    display: flex;
-    align-items: center;
-  }
-  
-  .footer-right {
-    display: flex;
-    align-items: center; /* Asegura que los iconos estén centrados verticalmente */
-  }
-  
-  .footer-link {
-    color: #fff;
-    text-decoration: none;
-    margin-right: 20px;
-    font-family: 'Arial', sans-serif;
-  }
-  
-  .footer-link:hover {
-    opacity: 0.8;
-  }
-  
-  .social-icon {
-    font-size: 24px;
-    color: #fff;
-    margin-left: 20px; /* Aumenta el margen para separar los iconos */
-    text-decoration: none;
-  }
-  
-  .social-icon:hover {
-    opacity: 0.8;
-  }
+  display: flex;
+  flex-direction: column; /* Hacer que los elementos se apilen verticalmente */
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2a2a3d;
+  color: #c8c8d6;
+  padding: 20px;
+  min-height: 80px;
+  border-top: 1px solid #444b6e;
+}
 
-  .social-icon.twitter:hover {
-    color: #1DA1F2; /* Color característico de Twitter */
-  }
-  
-  .social-icon.paypal:hover {
-    color: #00457C; /* Color característico de PayPal */
-  }
-  
-  .social-icon.discord:hover {
-    color: #7289DA; /* Color característico de Discord */
-  }
+.footer-left {
+  display: flex;
+  justify-content: center; /* Centrar los enlaces */
+  gap: 30px; /* Espacio entre los enlaces */
+  margin-bottom: 15px; /* Espacio inferior para separar de los iconos */
+}
+
+.footer-right {
+  display: flex;
+  justify-content: center; /* Centrar los iconos */
+  gap: 30px; /* Espacio entre los iconos */
+}
+
+.footer-link {
+  color: #c8c8d6;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: opacity 0.3s ease, color 0.3s ease;
+}
+
+.footer-link:hover {
+  opacity: 0.8;
+  color: #5c8edb;
+}
+
+.social-icon {
+  font-size: 28px;
+  color: #c8c8d6;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+.social-icon.twitter:hover {
+  color: #1DA1F2;
+}
+
+.social-icon.paypal:hover {
+  color: #00457C;
+}
+
+.social-icon.discord:hover {
+  color: #7289DA;
+}

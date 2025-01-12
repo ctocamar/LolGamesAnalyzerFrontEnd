@@ -6,18 +6,17 @@ import {} from '@angular/common/http';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports:[
-    HttpClientModule,
-    CommonModule,
-    HeaderComponent,
-    FooterComponent,
-    RouterOutlet,
-    DashboardComponent
-  ],
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+    standalone: true,
+    selector: 'app-root',
+    imports: [
+        CommonModule,
+        HeaderComponent,
+        FooterComponent,
+        RouterOutlet,
+        DashboardComponent
+    ],
+    templateUrl: './app.component.html',
+    styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
   title = 'Mi Aplicación'; // Puedes personalizar esto si lo deseas

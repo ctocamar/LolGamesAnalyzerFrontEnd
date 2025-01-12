@@ -6,11 +6,10 @@ import { Chart, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, 
 Chart.register(CategoryScale, LinearScale, BarElement, BarController, Title, Tooltip, Legend);
 Chart.defaults.plugins.legend.display = false; // Desactiva la leyenda globalmente
 @Component({
-  standalone: true,
-  selector: 'app-histogram',
-  templateUrl: './histogram.component.html',
-  styleUrls: ['./histogram.component.scss'],
-  imports: [CommonModule],
+    selector: 'app-histogram',
+    templateUrl: './histogram.component.html',
+    styleUrls: ['./histogram.component.scss'],
+    imports: [CommonModule]
 })
 export class HistogramComponent implements OnChanges, AfterViewInit {
   @Input() data: any;  // Recibe los datos del componente padre (DashboardComponent)
