@@ -1,15 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { HeatMapComponent } from './heat-map/heat-map.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './components/header/header.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 
  const routes: Routes = [
-    { path: '', redirectTo: 'inicio', pathMatch: 'full'},
-    { path: 'inicio', component: HeatMapComponent},
+    { path: '', redirectTo: 'dashboard', pathMatch: 'full'},
+    { path: 'dashboard', component: DashboardComponent},
     { path: 'test', component: HeaderComponent},
-    { path: '**', redirectTo: 'inicio' }
+    { path: '**', redirectTo: 'dashboard' }
 
   ];
   

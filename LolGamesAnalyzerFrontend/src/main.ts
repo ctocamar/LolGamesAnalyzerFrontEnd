@@ -3,9 +3,10 @@ import { DashboardComponent } from './app/components/dashboard/dashboard.compone
 import { importProvidersFrom } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app/app.component';
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { AppModule } from './app/app.module';
 
-bootstrapApplication(DashboardComponent, {
-  providers: [
-    importProvidersFrom(HttpClientModule, FormsModule), 
-  ],
-}).catch((err) => console.error(err));
+platformBrowserDynamic()
+  .bootstrapModule(AppModule)
+  .catch((err) => console.error(err));
