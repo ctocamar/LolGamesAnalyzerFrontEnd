@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
 import { DashboardComponent } from './components/dashboard/dashboard.component';
@@ -11,21 +11,15 @@ import { AppComponent } from './app.component';
 import { FooterComponent, HeaderComponent } from '@coreui/angular';
 import { AppRoutingModule } from './app-routing.module';
 
-@NgModule({
-  declarations: [],
-  imports: [
-    BrowserModule,
-    HttpClientModule,
-    FormsModule,
-    HeaderComponent,
-    FooterComponent,
-    DashboardComponent,
-    HistogramComponent,
-    AppRoutingModule,
-  ],
-  providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
-  ],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        FormsModule,
+        HeaderComponent,
+        FooterComponent,
+        DashboardComponent,
+        HistogramComponent,
+        AppRoutingModule], providers: [
+        { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 export class AppModule {}

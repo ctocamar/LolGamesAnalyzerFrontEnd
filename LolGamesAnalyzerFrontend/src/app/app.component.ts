@@ -2,7 +2,7 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FooterComponent, HeaderComponent } from '@coreui/angular';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { HttpClientModule } from '@angular/common/http';
+import {} from '@angular/common/http';
 import { RouterOutlet } from '@angular/router';
 
 @Component({

@@ -5,7 +5,7 @@ import { RouterOutlet } from '@angular/router';
 import { ApiService } from '../../services/api.service';
 import { Observable } from 'rxjs';
 import { ParticipantFrameDTO } from '../DTO/ParticipantFrameDTO';
-import { HttpClientModule } from '@angular/common/http';
+import {} from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { FooterComponent } from '../footer/footer.component';
 import { HeaderComponent } from '../header/header.component';
