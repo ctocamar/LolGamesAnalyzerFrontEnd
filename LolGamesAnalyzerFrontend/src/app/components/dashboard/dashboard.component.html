@@ -1,0 +1,51 @@
+<div class="dashboard-container">
+  <!-- Contenedor de los selectores en fila -->
+  <div class="selectors-row">
+     <!-- Selector de variable -->
+     <div class="select-wrapper">
+      <select [(ngModel)]="selectedHistogramType" (change)="onHistogramTypeChange()" class="custom-select">
+        <option value="gd">Gold Difference (GD)</option>
+        <option value="xp">Experience (XP)</option>
+        <option value="cs">Creep Score (CS)</option>
+        <option value="csj">Jungle Creep Score (JCS)</option>
+      </select>
+    </div>
+    <!-- Selector de jugadores -->
+    <div class="select-wrapper">
+      <select id="player" [(ngModel)]="selectedPlayer" (change)="loadData()" class="custom-select">
+        <option *ngFor="let player of players" [value]="player">{{ player}}</option>
+      </select>
+    </div>
+
+    <!-- Selector de minutos -->
+    <div class="select-wrapper">
+      <select id="minute" [(ngModel)]="selectedMinute" (change)="loadData()" class="custom-select">
+        <option *ngFor="let minute of minutes" [value]="minute">{{ minute }} min</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Histograma -->
+  <div class="histogram-container">
+    <div class="spinner-container" *ngIf="isLoading">
+      <div class="spinner"></div>
+    </div>
+    
+    <!-- Contenido del dashboard -->
+    <div *ngIf="!isLoading">
+      <!-- Selectores y el histograma -->
+      <div class="selectors">
+        <!-- Selectores existentes -->
+      </div>
+    
+      <app-histogram
+        *ngIf="histogramData"
+        [data]="histogramData"
+        [playerName]="selectedPlayer"
+        [playerRole]="selectedRole"
+        [selectedMinute]="selectedMinute"
+        [selectedStat]= "selectedHistogramType">
+      </app-histogram>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="histogram-container" *ngIf="data">
+  <!-- Encabezado del Histograma -->
+  <div class="histogram-header">
+    <img [src]="playerRole" alt="Role Icon" class="role-icon" />
+    <span class="player-name">{{ playerName | uppercase }}</span>
+    <div class="minute-info">{{ selectedStat | uppercase}}&#64;{{ selectedMinute }}</div> <!-- Mostramos el minuto -->
+  </div>
+  <!-- Área del Histograma -->
+  <div class="histogram-content">
+    <canvas #histogramCanvas></canvas>
+  </div>
+</div>

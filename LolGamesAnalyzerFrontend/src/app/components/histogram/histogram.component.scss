@@ -1,0 +1,59 @@
+.histogram-container {
+  background-color: #1e1e2f; /* Fondo oscuro */
+  border-radius: 12px; /* Bordes redondeados */
+  padding: 16px; /* Espaciado interno */
+  color: #ffffff; /* Texto blanco */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Sombra para resaltar */
+}
+
+.histogram-header {
+  text-align: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+  padding: 12px 8px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  top: 8px;
+  left: 8px;
+}
+
+.histogram-header h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #ff6384; /* Color destacado para el texto */
+}
+
+.histogram-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Altura fija para el histograma */
+}
+
+
+canvas {
+  width: 1200px;
+  height: 400px; 
+}
+
+
+.role-icon {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+}
+
+.player-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.minute-info {
+  text-align: right;
+  font-size: 20px;
+  font-weight: bold;
+}

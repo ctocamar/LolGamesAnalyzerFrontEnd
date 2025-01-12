@@ -1,0 +1,12 @@
+/* Fondo oscuro para toda la página */
+body {
+  background-color: #121212;  /* Color de fondo oscuro */
+  color: #fff;  /* Texto blanco */
+  font-family: 'Arial', sans-serif; /* Fuente para la página */
+}
+
+/* Asegúrate de que todo el contenido dentro del body también tenga el fondo oscuro */
+html, body {
+  height: 100%;
+  margin: 0;
+}

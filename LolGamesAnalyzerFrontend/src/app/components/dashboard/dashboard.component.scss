@@ -1,0 +1,160 @@
+/* Modo oscuro para toda la página */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #121212;  /* Fondo oscuro */
+  color: #fff;  /* Texto blanco */
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+/* Contenedor de los selectores en fila */
+.selectors-row {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.select-wrapper {
+  display: inline-block;
+}
+
+.custom-select {
+  font-size: 16px;
+  padding: 12px 20px;
+  width: 250px;
+  border-radius: 12px;
+  border: 2px solid #333;
+  background-color: #1e1e1e; /* Fondo oscuro en el selector */
+  color: #fff;  /* Texto blanco */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.custom-select:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+/* Estilo para el contenedor del histograma */
+.histogram-container {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  margin-top: 30px;
+  background: #222;  /* Fondo oscuro para el gráfico */
+  border-radius: 12px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .custom-select {
+    width: 100%;
+  }
+
+  .dashboard-container {
+    padding: 20px;
+    margin: 20px;
+  }
+
+  .histogram-container {
+    height: 300px;
+  }
+}
+
+/* Estilo general del selector */
+select {
+  appearance: none; /* Quita el estilo predeterminado */
+  background-color: #2e2e2e; /* Fondo oscuro */
+  color: #fff; /* Texto blanco */
+  border: 1px solid #555; /* Borde sutil */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 10px 15px; /* Espaciado interno */
+  font-size: 16px; /* Tamaño del texto */
+  outline: none; /* Elimina el contorno al enfocarse */
+  width: 200px; /* Ancho ajustable */
+  transition: all 0.3s ease; /* Transición para un efecto suave */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra moderna */
+  cursor: pointer; /* Cambia el cursor al pasar el mouse */
+}
+
+/* Cambiar la flecha del selector */
+select::-ms-expand {
+  display: none; /* Oculta la flecha en Internet Explorer */
+}
+
+/* Efecto hover */
+select:hover {
+  border-color: #777; /* Borde más claro al pasar el mouse */
+}
+
+/* Efecto al estar enfocado */
+select:focus {
+  border-color: #00bcd4; /* Borde azul moderno al enfocar */
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.5); /* Resalta con sombra */
+}
+
+/* Personalización de la barra de desplazamiento */
+select::-webkit-scrollbar {
+  width: 10px; /* Ancho de la barra */
+}
+
+select::-webkit-scrollbar-thumb {
+  background: #888; /* Color del deslizador */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+select::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Color del deslizador al pasar el mouse */
+}
+
+select::-webkit-scrollbar-track {
+  background: #1e1e1e; /* Fondo de la pista */
+  border-radius: 5px; /* Bordes redondeados */
+}
+
+/* Personalización para Firefox */
+select {
+  scrollbar-width: thin; /* Ancho reducido */
+  scrollbar-color: #888 #1e1e1e; /* Colores del deslizador y la pista */
+}
+
+.spinner-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6); /* Fondo semi-transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10; /* Asegúrate de que esté sobre el contenido */
+}
+
+.spinner {
+  border: 4px solid rgba(255, 255, 255, 0.2); /* Borde transparente */
+  border-top: 4px solid #ff6384; /* Color principal */
+  border-radius: 50%; /* Forma circular */
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite; /* Animación de rotación */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
